@@ -15,7 +15,7 @@ def predict():
     msg = data["message"]
 
     # -----------------------------
-    # 🔥 1. Keyword-based instant spam detection (Indian scam words)
+    # Keyword-based instant spam detection (Indian scam words)
     # -----------------------------
     fraud_keywords = [
         "aadhaar", "aadhar", "kyc", "loan approved", "loan", "account blocked",
@@ -32,7 +32,7 @@ def predict():
             })
 
     # -----------------------------
-    # 🔥 2. Machine Learning prediction (your model)
+    # Machine Learning prediction (your model)
     # -----------------------------
     proba = model.predict_proba([msg])[0][1]
     pred = model.predict([msg])[0]
